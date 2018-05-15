@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Fake Bloggin!</title>
+        <meta name = "description" content = "this is fake blogging in 2018">
+    </head>
+    <body>
+        <h1>Red Velvet Cakes</h1>
+        <img src = "https://c.pxhere.com/photos/bf/38/red_velvet_cupcakes_sweet_baked_food_dessert_calories_delicious-893457.jpg!d" alt = "Velvet Cake Description">
+        <p>Red velvet Cakes are a huge phenomenon nowadays, and they taste great too! They're red, fluffy, and looks great, tastes great, and feels great. Maybe you can learn how to make your own cake. When you have a family gathering, whether it's Thanksgiving or Chrisitmas, you will know what to do to put smiles on your family's faces by learning through this website!</p>
+        <a href = "https://en.wikipedia.org/wiki/Red_velvet_cake">Learn more about red velvet cakes!</a><br><br><br>
+        <h4>How much time will it take to make red velvet cakes?</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stage&emsp;</th>
+                    <th>Time(min.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Prep</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Cook</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table><br><br>
+        <h4> Ingredient List for yielding 24 cupcakes</h4>
+        <ul>
+            <li>2.5 cups all-purpose flour</li>
+            <li>1.5 cups sugar</li>
+            <li>1 teaspoon baking soda</li>
+            <li>1 teaspoon salt</li>
+            <li>1 teaspoon cocoa powder</li>
+            <li>1.5 cups vegetable oil</li>
+            <li>1 cup buttermilk</li>
+            <li>2 large eggs</li>
+            <li>2 tablespoon of red food coloring</li>
+            <li>1 teaspoon white distilled vinegar</li>
+            <li>1 teaspoon vanilla extract</li>
+        </ul>
+
+        Frosting ingredients:
+        <ul>
+            <li>1 pound cream cheese, softened</li>
+            <li>2 sticks butter, softened</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>4 cups sifted confectioners' sugar</li>
+        </ul><br><br>
+
+    
+        <div id = "content_source"> The recipe content above is from the food network website. Check out the directions for putting together the ingredients in the link below</div><br>
+        <a href = "https://www.foodnetwork.com/recipes/paula-deen/red-velvet-cupcakes-with-cream-cheese-frosting-recipe-2012478">Recipe</a><br><br><br><br><br>
+
+        <h2>Please take this short survey</h2>
+        <div>Subscribe!</div>
+        <label for = "email">Email: </label>
+        <input type = "text" id = "email" name = "email" value = "email"><br><br>
+        <label for = "weekly">Send me weekly emails</label>
+        <input type = "checkbox" id = "weekly" name = "email_options" value = "weekly">
+        <label for = "other_recipe">Send me other recipes!</label>
+        <input type = "checkbox" id = "other_recipe" name = "email_options" value = "other_recipe">
+        <div> Was this page useful?</div>
+        <label for = "agree">Yes</label>
+        <input type = "radio" id = "agree" name = "useful" value = "agree">
+        <label for = "disagree">No</label>
+        <input type = "radio" id = "disagree" name = "useful" value = "disagree"><br><br>
+        <div id = where_hear>How did you hear about us?</div>
+        <select name = "source_hear">
+            <option value = "facebook">Facebook</option>
+            <option value = "Newspaper">Newspaper</option>
+            <option value = "Referral">Referral</option>
+        </select><br><br>
+        <input type = "submit" value = "Submit">
+    </body>
+</html>
