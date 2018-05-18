@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Position Practice</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <style>
+        * {
+        margin: 0px;
+        padding: 0px;
+        }
+        #wrapper{
+        background-color: silver;
+        margin: 0px auto;
+        overflow:hidden;
+        padding: 20px;
+        }
+        #header{
+        height: 150px;
+        background-color: green;
+        }
+        #navigation{
+        height: 300px;
+        width: 25%;
+        background-color: blue;
+        display: inline-block;
+        margin: 20px 0px 0px 0px;
+        }
+        #main_content{
+        text-align:center;
+        height: 400px;
+        width: 70%;
+        background-color: red;
+        display: inline-block;
+        float:right;
+        }
+        .subcontents{
+        height: 200px;
+        width: 30%;
+        background-color: yellow;
+        display:inline-block;
+        margin: 10px;
+        }
+        #advertisement{
+        height: 120px;
+        width: 90%;
+        background-color: purple;
+        padding: 10px;
+        margin: 10px auto;
+        }
+        @media only screen and (max-width: 480px) {
+            #navigation {
+                display:none;
+            }
+            #main_content {
+                display: block;
+                width: 97%;
+                margin-top: 10px;
+                padding-left: 10px; 
+            }
+            .subcontents {
+                width: 80%;
+                height: 20%;
+            }
+            #advertisement {
+                width: 75%;
+                height: 10%;
+            }
+        }
+        @media only screen and (min-width: 481px) {
+            #navigation {
+                display:none;
+            }
+            #main_content {
+                text-align: left;
+                width: 97%;
+                margin-top: 10px; 
+                padding-left: 10px; 
+            }
+            .subcontents {
+                margin-left: 15px;
+                width: 45%;
+                height: 30%;
+            }
+            #advertisement {
+                width: 90%;
+                height: 10%;
+            }
+
+        }
+        @media only screen and (min-width: 1024px) {
+            #navigation {
+                display: inline-block;
+            }
+            #main_content {
+                display: inline-block;
+                text-align: left;
+                width: 73%;
+                margin-top: 20px; 
+                padding-left: 10px; 
+            }
+            .subcontents {
+                margin-top: 3%;
+                margin-left: 15px;
+                width: 30%;
+                height: 60%;
+            }
+            #advertisement {
+                width: 95%;
+                height: 15%;
+                margin-left: 1%;
+            }
+        }
+      </style>
+   </head>
+   <body>
+       <div id="wrapper">
+         <div id="header"></div>
+         <div id="navigation"></div>
+         <div id="main_content">
+            <div class="subcontents"></div>
+            <div class="subcontents"></div>
+            <div class="subcontents"></div>
+            <div id="advertisement"></div>
+         </div>
+      </div><!-- end of wrapper -->
+   </body>
+</html>
