@@ -1,0 +1,54 @@
+   * {
+    margin: 0px;
+    padding: 0px;
+   }
+   #wrapper{
+    background-color: silver;
+    margin: 0px auto;
+    overflow:hidden;
+    padding: 20px;
+   }
+   #header{
+    height: 150px;
+    background-color: green;
+   }
+   #navigation{
+    height: 300px;
+    width: 25%;
+    background-color: blue;
+    display: inline-block;
+    margin: 20px 0px 0px 0px;
+   }
+   #main_content{
+    text-align:center;
+    height: 400px;
+    width: 70%;
+    background-color: red;
+    display: inline-block;
+    float:right;
+    margin: 20px;
+   }
+   .subcontents{
+    height: 200px;
+    width: 30%;
+    background-color: yellow;
+    display:inline-block;
+    margin: 10px;
+   }
+   #advertisement{
+    height: 120px;
+    width: 90%;
+    background-color: purple;
+    padding: 10px;
+    margin: 10px auto;
+   }
+   @media only screen and (max-width: 480px) {
+   }
+   @media only screen and (min-width: 481px) {
+
+   }
+   @media only screen and (min-width: 1024px) {
+
+   }
+
+}
