@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <script type="text/javascript" src= 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.older').click(function(){
+            $('h3').text('Hello Older People!');
+        })
+        $('.done_reading').click(function(){
+            $('.p1').hide();
+        })
+        $('.show_new').click(function(){
+            $('.p2').toggle();
+        })
+        $('.slidet').click(function(){
+            $('.slidet').slideUp();
+            $('.slidet').slideDown();
+        })
+        $('.noclick').click(function(){
+            $('body').fadeOut();
+            alert('warning');
+            $('body').fadeIn();
+        })
+        $('.yellow').click(function(){
+            $('p').addClass('yellow_background');
+            $('.yellow').slideToggle();
+            $('.yellow_background').html('<font color="yellow">This is some text!</font>');
+            $('h3').before('I forgot to add the tile\n');
+            $('.yellow').after('\nThis is the footer');
+            $('.yellow').append('just adding stuff');
+        })
+        $('.where').click(function(){
+            var image_location= $('#my_image').attr('src');
+            $('.where').append(image_location);
+        })
+        $('.get_val').click(function(){
+            var gettingval=$('.input').val();
+            $('.get_val').text(gettingval);
+        })
+        $('.message').click(function(){
+            $('div').data('get_me','YAAAAAAA!');
+            alert($('div').data('get_me'));
+        })
+        
+    });
+    </script>
+</head>
+<body>
+    <h3>Hello High School Students!</h3>
+    <button class="older"> Click me to if you are older </button>
+
+    <p class='p1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis ex id blandit bibendum. 
+        Morbi et lobortis velit. Donec ac orci varius arcu elementum cursus. 
+        Nunc eget orci vitae urna tempus condimentum vel non lorem. 
+        Maecenas vitae velit ut mi scelerisque mattis consequat non dolor. 
+        Maecenas iaculis id lacus sed cursus. Phasellus interdum, risus a sagittis vehicula, quam felis congue nibh, 
+        nec cursus felis arcu ut felis. Donec facilisis euismod lacus, rhoncus luctus risus facilisis accumsan. 
+        Integer a hendrerit dui, sed viverra nisi. Cras faucibus mattis viverra.</p>
+    <button class='done_reading'>Click me if you are done reading </button>
+    <button class="show_new">Make new text disappear and appear</button>
+    <p class='p2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis ex id blandit bibendum. 
+        Morbi et lobortis velit. Donec ac orci varius arcu elementum cursus. 
+        Nunc eget orci vitae urna tempus condimentum vel non lorem. 
+        Maecenas vitae velit ut mi scelerisque mattis consequat non dolor. 
+        Maecenas iaculis id lacus sed cursus. Phasellus interdum, risus a sagittis vehicula, quam felis congue nibh, 
+        nec cursus felis arcu ut felis. Donec facilisis euismod lacus, rhoncus luctus risus facilisis accumsan. 
+        Integer a hendrerit dui, sed viverra nisi. Cras faucibus mattis viverra.</p>
+    
+    <p class='slidet'>See some cool effects! Slide</p>
+    <p class='noclick'>Don't click this!</p>
+    <button class='yellow'>Change color to yello</button>
+    <p class='where'> Where'd did you get your image?</p>
+    <img id="my_image" src='https://i.ytimg.com/vi/obclZDUAeSY/maxresdefault.jpg' alt='cloud'>
+    <form>
+        <input class='input' type="text" value="month">
+        <h4 class='get_val'>What is in the box? Click me!</h4>
+    </form>
+    <p class='message'>Add message to the alert!</p>
+    <div></div>
+</body>
+</html>
