@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover in an Out</title>
+    <style>
+        img{
+            width:300px;
+            height:300px;
+            padding: 10px;
+        }
+    
+    
+    </style>
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('img').hover(function(){
+                var get_alt = $(this).attr('data-alt-src');
+                var orig_src = $(this).attr('src');
+                $(this).attr('src', get_alt);
+                $(this).attr('data-alt-src', orig_src);
+            }, function(){
+                var get_alt = $(this).attr('data-alt-src');
+                var orig_src = $(this).attr('src');
+                $(this).attr('src', get_alt);
+                $(this).attr('data-alt-src', orig_src);
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <h2>Find Your Outfit Today!</h2>
+    <img src="striped.jpeg" data-alt-src="striped_back.jpeg"/>
+    <img src="jacket.jpeg" data-alt-src="jacket_back.jpeg"/>
+    <img src="white_suit.jpeg" data-alt-src="white_suit_back.jpeg"/>
+    <img src="basic.jpeg" data-alt-src="basic_back.jpeg"/>
+</body>
+</html>
