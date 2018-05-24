@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <style type="text/css">
+        img {
+            widows: 200px;
+            height:200px;
+        }
+        button{
+            position:fixed;
+            bottom:100px;
+            left:100px;
+            background-color:green;
+            font-size:120%;
+            color:white;
+        }
+    </style>
+    <script type="text/javascript" src= 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+        $('img').click(function(){
+            $(this).slideUp();
+        })
+        $('button').click(function(){
+            $('img').slideDown();
+        })
+    });
+    </script>
+</head>
+<body>
+    <h1>HELLO EVERYONE!</h1>
+    <img src="http://www.adagio.com/images5/flavor_thumbnail/mango.jpg" alt="mango">
+    <img src="http://www.adagio.com/images5/flavor_thumbnail/mango.jpg" alt="mango">
+    <img src="http://www.adagio.com/images5/flavor_thumbnail/mango.jpg" alt="mango">
+    <img src="http://www.adagio.com/images5/flavor_thumbnail/mango.jpg" alt="mango">
+    <img src="http://www.adagio.com/images5/flavor_thumbnail/mango.jpg" alt="mango">
+    <img src="http://www.adagio.com/images5/flavor_thumbnail/mango.jpg" alt="mango">
+    <img src="http://www.adagio.com/images5/flavor_thumbnail/mango.jpg" alt="mango">
+    <img src="http://www.adagio.com/images5/flavor_thumbnail/mango.jpg" alt="mango">
+    <button>Restore</button>
+   
+</body>
+</html>
