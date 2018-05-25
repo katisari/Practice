@@ -1,0 +1,10 @@
+INSERT INTO tweets (tweet, user_id, created_at, updated_at) 
+VALUES('hi yyyyaaalll', 3, NOW(), NOW());
+
+DELETE FROM tweets WHERE id=24;
+
+SELECT * FROM users
+WHERE id > 2 or id = 1;
+
+UPDATE users 
+SET first_name = 'KALOO' WHERE id = 1;
