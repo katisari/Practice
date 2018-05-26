@@ -1,0 +1,56 @@
+Friendships Assignment
+
+SELECT  users.first_name, users.last_name, users2.first_name as friend_first_name, users2.last_name as friend_last_name FROM users 
+LEFT JOIN friendships on friendships.friend_1_id = users.id
+LEFT JOIN users as users2 ON friendships.friend_2_id = users2.id 
+
+1. Return all users who are friends with Kermit, make sure their names are displayed in results.
+
+SELECT  users.first_name, users.last_name, users2.first_name as friend_first_name, users2.last_name as friend_last_name FROM users 
+LEFT JOIN friendships on friendships.friend_1_id = users.id
+LEFT JOIN users as users2 ON friendships.friend_2_id = users2.id 
+WHERE users2.first_name = 'Kermit';
+
+2. Return the count of all friendships
+
+SELECT  COUNT(*) FROM users
+JOIN friendships on friendships.friend_1_id = users.id
+JOIN users as users2 ON friendships.friend_2_id = users2.id 
+
+3. Find out who has the most friends and return the count of their friends.
+
+SELECT concat(users.first_name, ' ', users.last_name) as name, COUNT(*) FROM users
+JOIN friendships on friendships.friend_1_id = users.id
+JOIN users as users2 ON friendships.friend_2_id = users2.id 
+GROUP BY users.id
+ORDER BY 2 DESC
+LIMIT 1;
+
+4. Create a new user and make them friends with Eli Byers, Kermit The Frog, and Marky Mark
+
+INSERT INTO users (first_name, last_name, created_at) 
+VALUES('HELLO', 'WORLD', NOW());
+
+INSERT INTO friendships
+VALUES
+(6,2,NOW()), (6,4, NOW()), (6,5, NOW());
+
+5. Return the friends of Eli in alphabetical order
+
+SELECT  concat(users.first_name, ' ', users.last_name) as user_name, concat_ws(' ', users2.first_name, users2.last_name) as friend_name FROM users 
+LEFT JOIN friendships on friendships.friend_1_id = users.id
+LEFT JOIN users as users2 ON friendships.friend_2_id = users2.id 
+WHERE users.first_name = 'Eli'
+ORDER BY friend_name
+
+
+6. Remove Marky Marky from Eli’s friends.
+
+DELETE FROM friendships WHERE 
+friend_1_id = 2 AND friend_2_id = 5;
+
+7. Return all friendships, displaying just the first and last name of both friends
+
+SELECT  concat_ws(' ', users.first_name, users.last_name) friend_1_name, concat_ws(users2.first_name, users2.last_name) as friend_2_name FROM users 
+LEFT JOIN friendships on friendships.friend_1_id = users.id
+LEFT JOIN users as users2 ON friendships.friend_2_id = users2.id 
